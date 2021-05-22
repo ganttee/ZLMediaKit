@@ -22,8 +22,8 @@ static size_t constexpr kMaxUnreadyFrame = 100;
 namespace mediakit{
 
 void MediaSink::addTrack(const Track::Ptr &track_in) {
-    GET_CONFIG(bool, enabel_audio, General::kEnableAudio);
-    if (!enabel_audio && track_in->getTrackType() == TrackAudio) {
+    GET_CONFIG(bool, enable_audio, General::kEnableAudio);
+    if (!enable_audio && track_in->getTrackType() == TrackAudio) {
         //音频被全局忽略
         return;
     }
